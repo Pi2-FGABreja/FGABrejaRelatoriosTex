@@ -1,4 +1,4 @@
-\clearpage
+\newpage
 
 \section{Solução Proposta}
 
@@ -24,7 +24,6 @@ A fim de se obter um maior controle de qualidade e facilidade na produção, as 
     \item Controlar o tempo de fervura.
 \end{itemize}
 
-
 \subsubsection{Resfriamento}
 \begin{itemize}
     \item Diminuir a temperatura para a temperatura ambiente;
@@ -40,6 +39,7 @@ A fim de se obter um maior controle de qualidade e facilidade na produção, as 
     \item Liberar co2 sem receber o2.
 \end{itemize}
 
+\clearpage
 As imagens a seguir ilustram as temperaturas dos processos e as ações que devem ser tomadas em cada etapa.
 
 \begin{figure}[h]
@@ -53,3 +53,7 @@ As imagens a seguir ilustram as temperaturas dos processos e as ações que deve
     \includegraphics[scale=0.2]{images/grafico2.png}
     \caption{Temperaturas ao longo do tempo}
 \end{figure}
+
+\subsection{Monitoramento}
+
+Para o monitoramento do processo, serão utilizados sensores que, através de um microcontrolador MSP, enviará os dados para uma RaspberryPi. Na Rasp, será executado um servidor RESTful, implementado em Python e Flask (framework web), onde, através dela, será possível controlar todo o sistema. Para o usuário final, será fornecido um sistema web responsivo, que permitirá o acesso via celular, onde o usuário terá acesso à graficos em tempo real das informações vindas dos sensores, além de fornecer uma interface amigável para facilitar o controle do processo.
